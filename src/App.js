@@ -9,7 +9,7 @@ function App() {
      setToDo(e.target.value)
   }
   function AddItem(){
-    settoDoList(toDoList.push(toDo))
+    settoDoList([...toDoList,toDo])
   }
 
 
@@ -24,11 +24,9 @@ function App() {
               Record =>{
                 return(
                   <div className ='box'>
-                  {Record.name}
-                  </div>
-                )
-              }
-            )
+                  {Record.name}{Record.email}
+                  </div>  )
+              } )
           }
           {
             toDoList.map(
